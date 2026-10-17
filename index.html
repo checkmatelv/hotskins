@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#151722">
+  <title>HotSkins — визуальный гайд</title>
+  <style>
+    :root {
+      --bg: #151722;
+      --panel: #202438;
+      --panel2: #262b43;
+      --text: #f5f6ff;
+      --muted: #a3accd;
+      --blue: #3986f6;
+      --line: rgba(255,255,255,.08);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      padding-bottom: 245px;
+    }
+    header {
+      padding: 30px 18px 22px;
+      text-align: center;
+      background: radial-gradient(ellipse at top, #263b64 0%, var(--bg) 70%);
+      border-bottom: 1px solid var(--line);
+    }
+    .tag {
+      display: inline-block;
+      padding: 5px 11px;
+      border-radius: 999px;
+      background: rgba(57,134,246,.16);
+      color: #9fc6ff;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    h1 { margin: 12px 0 6px; font-size: clamp(25px, 5vw, 38px); line-height: 1.15; }
+    header p { max-width: 620px; margin: 0 auto; color: var(--muted); }
+    main { width: min(920px, 100%); margin: 0 auto; padding: 20px 14px 30px; }
+    .shot {
+      margin: 0 0 20px;
+      overflow: hidden;
+      border-radius: 18px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      box-shadow: 0 12px 30px rgba(0,0,0,.16);
+    }
+    .shot img { display: block; width: 100%; height: auto; }
+    figcaption { padding: 12px 15px 14px; color: var(--muted); font-size: 14px; }
+    figcaption strong { color: var(--text); display: block; margin-bottom: 3px; font-size: 15px; }
+    .bottom-guide {
+      position: fixed;
+      z-index: 10;
+      left: 0; right: 0; bottom: 0;
+      padding: 14px 16px calc(14px + env(safe-area-inset-bottom));
+      background: rgba(24,27,42,.96);
+      border-top: 1px solid rgba(255,255,255,.12);
+      box-shadow: 0 -12px 35px rgba(0,0,0,.28);
+      backdrop-filter: blur(14px);
+    }
+    .guide-inner { width: min(920px, 100%); margin: 0 auto; }
+    .guide-heading { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
+    .guide-icon {
+      width: 34px; height: 34px; display: grid; place-items: center;
+      flex: 0 0 auto; border-radius: 11px; background: rgba(57,134,246,.18);
+      color: #8ebcff; font-weight: 800;
+    }
+    h2 { font-size: 17px; margin: 0; }
+    .guide-copy { margin: 0; color: #d2d7ed; font-size: 13px; line-height: 1.45; }
+    .notice { color: #ffcf8a; font-weight: 650; }
+    .actions { display: flex; gap: 10px; margin-top: 10px; }
+    .actions a, .actions button {
+      border: 0; border-radius: 11px; padding: 10px 14px;
+      font: inherit; font-size: 13px; font-weight: 750; text-decoration: none;
+      cursor: pointer; text-align: center;
+    }
+    .primary { color: white; background: var(--blue); flex: 1; }
+    .secondary { color: #dce4ff; background: var(--panel2); }
+    @media (min-width: 700px) {
+      body { padding-bottom: 180px; }
+      .bottom-guide { padding: 16px 22px; }
+      .guide-copy { font-size: 14px; }
+      .guide-layout { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+      .guide-text { flex: 1; }
+      .actions { min-width: 190px; margin-top: 0; }
+    }
+    @media (max-width: 360px) {
+      body { padding-bottom: 265px; }
+      .actions a, .actions button { padding: 9px 10px; }
+    }
+  </style>
+</head>
+<body id="top">
+  <header>
+    <span class="tag">Визуальный гайд</span>
+    <h1>HotSkins: обзор интерфейса</h1>
+    <p>Скриншоты интерфейса в правильном порядке. Нажми на изображение, чтобы открыть его крупнее.</p>
+  </header>
+
+  <main>
+    <figure class="shot">
+      <a href="01-home-login.jpg" target="_blank" rel="noopener">
+        <img src="01-home-login.jpg" alt="Главная страница и кнопка входа или регистрации" loading="eager">
+      </a>
+      <figcaption><strong>1. Главная страница</strong>На верхней панели находится кнопка «Вход / Регистрация».</figcaption>
+    </figure>
+
+    <figure class="shot">
+      <a href="02-registration-form.jpg" target="_blank" rel="noopener">
+        <img src="02-registration-form.jpg" alt="Форма регистрации" loading="lazy">
+      </a>
+      <figcaption><strong>2. Форма регистрации</strong>На экране показаны поля аккаунта, капча и кнопка создания аккаунта.</figcaption>
+    </figure>
+
+    <figure class="shot">
+      <a href="03-menu.jpg" target="_blank" rel="noopener">
+        <img src="03-menu.jpg" alt="Меню сайта после входа" loading="lazy">
+      </a>
+      <figcaption><strong>3. Меню пользователя</strong>Здесь отображаются профиль, баланс и разделы сайта.</figcaption>
+    </figure>
+
+    <figure class="shot">
+      <a href="04-bonuses-menu.jpg" target="_blank" rel="noopener">
+        <img src="04-bonuses-menu.jpg" alt="Раздел бонусов" loading="lazy">
+      </a>
+      <figcaption><strong>4. Раздел бонусов</strong>Скриншот показан только для ориентира по интерфейсу; переходить в этот раздел не нужно.</figcaption>
+    </figure>
+
+    <figure class="shot">
+      <a href="05-bonus-task.jpg" target="_blank" rel="noopener">
+        <img src="05-bonus-task.jpg" alt="Пример задания для получения бонуса" loading="lazy">
+      </a>
+      <figcaption><strong>5. Пример бонусного задания</strong>Этот экран приведён как часть исходных скриншотов. Выполнять задание не требуется.</figcaption>
+    </figure>
+  </main>
+
+  <aside class="bottom-guide" aria-label="Информационная панель">
+    <div class="guide-inner guide-layout">
+      <div class="guide-text">
+        <div class="guide-heading">
+          <div class="guide-icon">i</div>
+          <h2>Как пройти регистрацию</h2>
+        </div>
+        <p class="guide-copy">
+          Открой форму регистрации, заполни логин и пароль, повтори пароль, пройди reCAPTCHA
+          и нажми «Создать аккаунт». На этом инструкция заканчивается — пользоваться сайтом дальше не нужно.
+          Используй уникальный пароль и не передавай никому коды подтверждения.
+        </p>
+      </div>
+      <div class="actions">
+        <a class="primary" href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'}); return false;">К началу страницы ↑</a>
+        <button class="secondary" type="button" onclick="document.querySelector('.bottom-guide').style.display='none'; document.body.style.paddingBottom='24px';">Скрыть</button>
+      </div>
+    </div>
+  </aside>
+</body>
+</html>
